@@ -25,6 +25,31 @@
       updateCharts();
     });
 
+    function generateRandomPastelColor(usedColors) {
+      const hue = Math.floor(Math.random() * 360); // Seleciona um tom de cor aleatório
+      const pastel = Math.floor(Math.random() * 20) + 70; // Define uma luminosidade mais alta para tons mais claros
+      const saturation = Math.floor(Math.random() * 20) + 60; // Define uma saturação pastel
+
+      const color = `hsl(${hue}, ${saturation}%, ${pastel}%)`; // Cria a cor no formato HSL
+
+      // Verifica se a cor já foi usada anteriormente
+      if (usedColors.includes(color)) {
+        // Se já foi usada, chama a função recursivamente para gerar uma nova cor
+        return generateRandomPastelColor(usedColors);
+      } else {
+        // Se não foi usada, retorna a cor
+        return color;
+        }
+    }
+
+    function generatePastelColors(numColors) {
+      const colors = [];
+      for (let i = 0; i < numColors; i++) {
+        colors.push(generateRandomPastelColor(colors));
+      }
+      return colors;
+    }
+
     function updateCharts() {
       if (activityChart !== null) {
         activityChart.destroy();
@@ -34,6 +59,9 @@
       }
 
       const activityLabels = Object.keys(activities);
+      const numActivities = activityLabels.length;
+      const activityColors = generatePastelColors(numActivities);
+
       const activityData = activityLabels.map(type => activities[type].length);
 
       const activityChartCtx = document.getElementById('activityChart').getContext('2d');
@@ -44,11 +72,7 @@
           datasets: [{
             label: 'Atividades',
             data: activityData,
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.5)',
-              'rgba(54, 162, 235, 0.5)',
-              'rgba(255, 206, 86, 0.5)',
-            ],
+            backgroundColor: activityColors,
             borderWidth: 1
           }]
         }
@@ -67,11 +91,7 @@
           datasets: [{
             label: 'Média de Conclusão',
             data: completionData,
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.5)',
-              'rgba(54, 162, 235, 0.5)',
-              'rgba(255, 206, 86, 0.5)',
-            ],
+            backgroundColor: activityColors,
             borderWidth: 1
           }]
         },
