@@ -1,0 +1,28 @@
+.content {
+    position: relative;
+    width: 100vw; /* Largura igual à largura da janela do navegador */
+    height: 100vh; /* Altura igual à altura da janela do navegador */
+  }
+  
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.diariodosudoeste.com.br/0f2864ea-utfpr.jpg'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    filter: blur(5px); /* Aplica um filtro de desfoque à imagem de fundo */
+  }
+  
+  .content h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: #fff; /* Cor do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+  }
