@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag "form" %>
+
+<div class="container">
+    <%= form_with(model: activity) do |form| %>
+      <% if activity.errors.any? %>
+        <div class="error-messages">
+          <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+          <ul>
+            <% activity.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-field">
+        <%= form.label :name, "Name:", class: "label" %>
+        <%= form.text_field :name, class: "input" %>
+      </div>
+
+      <div class="form-field">
+        <%= form.label :activity_type, "Type:", class: "label" %>
+        <%= form.select :activity_type, ['Iniciação científica', 'Pós-Graduação', 'Mestrado', 'Extensão'], prompt: 'Select type', class: "input" %>
+      </div>
+
+      <div id="form-field">
+        <%= form.label :progress, "Progress:", class: "label" %>
+        <%= form.number_field :progress, class: "input" %>
+      </div>
+
+      <div class="form-field">
+        <%= form.label :activity_id, "Activity ID:", class: "label" %>
+        <%= form.number_field :activity_id, class: "input" %>
+      </div>
+
+      <div class="form-field">
+        <%= form.submit "Save", class: "button" %>
+      </div>
+    <% end %>
+  </div>

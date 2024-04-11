@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades Acadêmicas</title>
+  <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/chart.js' %>
+  <%= stylesheet_link_tag 'dashboard' %>
+</head>
+<body>
+  <div id="container">
+    <h2>Registrar Atividades Acadêmicas</h2>
+    <div class="chart-container">
+      <canvas id="completionChart" width="300" height="300"></canvas>
+      <canvas id="activityChart" width="300" height="300"></canvas>
+    </div>
+  </div>
+  <script>
+    let activities = <%= @activities_data.html_safe %>;
+
+    let activityChart = null;
+    let completionChart = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCharts();
+    });
+
+    function updateCharts() {
+      if (activityChart !== null) {
+        activityChart.destroy();
+      }
+      if (completionChart !== null) {
+        completionChart.destroy();
+      }
+
+      const activityLabels = Object.keys(activities);
+      const activityData = activityLabels.map(type => activities[type].length);
+
+      const activityChartCtx = document.getElementById('activityChart').getContext('2d');
+      activityChart = new Chart(activityChartCtx, {
+        type: 'pie',
+        data: {
+          labels: activityLabels,
+          datasets: [{
+            label: 'Atividades',
+            data: activityData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.5)',
+              'rgba(54, 162, 235, 0.5)',
+              'rgba(255, 206, 86, 0.5)',
+            ],
+            borderWidth: 1
+          }]
+        }
+      });
+
+      const completionData = activityLabels.map(type => {
+        const total = activities[type].reduce((acc, activity) => acc + activity.completion, 0);
+        return activities[type].length > 0 ? total / activities[type].length : 0;
+      });
+
+      const completionChartCtx = document.getElementById('completionChart').getContext('2d');
+      completionChart = new Chart(completionChartCtx, {
+        type: 'bar',
+        data: {
+          labels: activityLabels,
+          datasets: [{
+            label: 'Média de Conclusão',
+            data: completionData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.5)',
+              'rgba(54, 162, 235, 0.5)',
+              'rgba(255, 206, 86, 0.5)',
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

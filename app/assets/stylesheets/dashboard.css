@@ -1,0 +1,34 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10%;
+}
+
+#container {
+    max-width: 800px;
+    margin-right: auto;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  canvas {
+    max-width: 300px;
+    margin-right: 20px;
+  }
+  
+  #activityChart {
+    margin: 10%;
+    order: 1;
+  }
+  
+  #completionChart {
+    order: 2;
+  }
+  

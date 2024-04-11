@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag "activity" %>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @activity %>
+
+<div>
+
+  <% if user_signed_in? %>
+    <%= link_to "Editar atividade", edit_activity_path(@activity) %> |
+    <%= button_to "Deletar atividade", @activity, method: :delete %>
+  <% end %>
+
+<%= link_to "Todas as atividades", activities_path %>
+  
+</div>

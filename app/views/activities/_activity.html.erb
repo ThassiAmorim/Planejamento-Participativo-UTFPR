@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "activity" %>
+
+<div id="<%= dom_id activity %>" class="activity">
+  <p>
+    <strong>Nome:</strong>
+    <%= activity.name %>
+  </p>
+
+  <p>
+    <strong>Tipo:</strong>
+    <%= activity.activity_type %>
+  </p>
+
+  <p>
+    <strong>Progresso:</strong>
+    <%= activity.progress %>
+  </p>
+
+  <p>
+    <strong>Id:</strong>
+    <%= activity.activity_id %>
+  </p>
+</div>

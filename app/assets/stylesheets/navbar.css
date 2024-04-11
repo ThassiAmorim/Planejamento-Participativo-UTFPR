@@ -1,0 +1,66 @@
+/* navbar.css */
+
+body{
+    margin: 0;
+}
+
+/* Estilos gerais do navbar */
+.navbar {
+    background-color: #9edff0; /* Cor de fundo */
+    padding: 15px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    display: flex;
+    justify-content:left;
+}
+
+/* Estilos para o logo */
+.logo {
+    width: 100px; /* Largura da imagem do logo */
+    margin-right: 20px;
+}
+
+/* Estilos para os links */
+#activities-links,
+#devise-links {
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+}
+
+#devise-links {
+    margin-left: auto; 
+}
+
+
+#activities-links li,
+#devise-links li {
+    display: inline-block; /* Exibe os links em linha */
+    margin-right: 20px; /* Espaçamento entre os links */
+}
+
+
+#activities-links li a,
+#devise-links li a {
+    color: rgb(0, 0, 0); /* Cor dos links */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none; /* Remove sublinhado */
+    padding: 5px 10px; /* Espaçamento interno dos botões */
+    border-radius: 5px; /* Borda arredondada */
+    background-color: #00000000; /* Cor de fundo padrão dos botões */
+    transition: background-color 0.8s ease; /* Transição suave da cor de fundo */
+}
+
+#activities-links li a:hover,
+#devise-links li a:hover {
+    background-color: #00e5ff; /* Cor de fundo dos botões ao passar o mouse */
+}
+
+.navbar p{
+    color: #05630d;
+    font-family:monospace;
+    font-weight:500;
+    font-size: 28px;
+    margin: 0%;
+}

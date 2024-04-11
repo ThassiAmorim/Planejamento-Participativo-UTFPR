@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades</title>
+  <%= stylesheet_link_tag 'activity' %>
+</head>
+<body>
+  <div class="container">
+    <% if notice %>
+      <p style="color: green"><%= notice %></p>
+    <% end %>
+
+    <h1>Atividades</h1>
+
+    <div id="activities">
+      <% @activities.each do |activity| %>
+        <div class="activity">
+          <%= render activity %>
+          <p>
+            <%= link_to "Detalhes", activity %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+    <% if user_signed_in? %>
+      <%= link_to "Adicionar atividade", new_activity_path, class: "new-activity-link" %>
+    <% end %>
+  </div>
+</body>
+</html>
