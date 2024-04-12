@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag "activity" %>
+
+
+<div class="container">
+  <h1 class="page-title">Lista de Usuários</h1>
+
+  <% @users.each do |user| %>
+    <div class="user-item">
+      <p><%= user.email %></p>
+      <% if user.admin? %>
+        <p class="admin-tag">admin</p>
+      <% end %>
+      <% if current_user.admin? %>
+        <%= button_to "Delete", user_path(user), method: :delete, data: { confirm: "Are you sure?" }, class: "delete-button" %>
+      <% end %>
+    </div>
+  <% end %>
+
+
+  <% if current_user.admin? %>
+    <%= link_to 'Novo Usuário', new_user_path %>
+  <% end %>
+
+</div>

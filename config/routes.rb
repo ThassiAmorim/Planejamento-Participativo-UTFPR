@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :activities
 
+  #resources :users, only: [:destroy, :index, :new] caso queira adicionar mais usuarios
+
+
+
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

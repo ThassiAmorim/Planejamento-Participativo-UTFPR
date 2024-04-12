@@ -6,7 +6,8 @@
 
     <ul id="activities-links">
         <li><%= link_to "Atividades", activities_path %></li>
-        <li><%= link_to "Dashboards", dashboard_path %></li>
+        <li><%= link_to "Dashboards", dashboard_path, data: { turbo: "false" } %>
+</li>
     </ul>
 
     

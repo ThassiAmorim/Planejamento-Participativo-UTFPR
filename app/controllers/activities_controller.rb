@@ -85,3 +85,5 @@ class ActivitiesController < ApplicationController
       params.require(:activity).permit(:name, :activity_type, :progress, :activity_id)
     end
 end
+
+
