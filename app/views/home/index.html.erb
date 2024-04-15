@@ -1,15 +1,19 @@
-
 <div class="content">
     <div class="background-overlay"></div>
-      <h1>Planejamento Participativo - 
-            Campus Pato Branco</h1>
-
-      <h2>Temos atualmente <%=@activities_total%> Atividades</h2>
-      <h3>Sendo <%=@activities_ic%> Iniciações científicas,
-          <%=@activities_pos%> Pós-Graduações,
-          <%=@activities_mestrados%> Mestrados e 
-          <%=@activities_ext%> Projetos de extensão
-          </h3>
-  </div>
-</body>
-
+    <div class="content-container">
+        <h1>Planejamento Participativo - Campus Pato Branco</h1>
+        <h3 class="activity-list">
+            <ul>
+                <li>Iniciações científicas: <span class="activity-value"><%=@activities_ic%></span></li>
+                <li>Pós-Graduações: <span class="activity-value"><%=@activities_pos%></span></li>
+                <li>Mestrados: <span class="activity-value"><%=@activities_mestrados%></span></li>
+                <li>Projetos de extensão: <span class="activity-value"><%=@activities_ext%></span></li>
+            </ul>
+        </h3>
+        <%
+=begin%>
+ <h3>Total: <span class="total-value"><%=@activities_total%></span></h3> 
+<%
+=end%>
+    </div>
+</div>
