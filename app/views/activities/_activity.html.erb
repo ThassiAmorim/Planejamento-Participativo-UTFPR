@@ -20,4 +20,12 @@
     <strong>Id:</strong>
     <%= activity.activity_id %>
   </p>
+
+  <% if action_name == "show" %>
+    <p>
+      <strong>Descrição</strong>
+      <%= activity.description %>
+    </p>
+  <% end %>
+
 </div>

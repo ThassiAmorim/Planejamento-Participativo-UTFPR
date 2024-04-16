@@ -1,0 +1,5 @@
+pt-BR:
+  filters:
+    name: "Nome"
+    type: "Tipo"
+    id: "ID"

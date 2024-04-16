@@ -8,9 +8,38 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
+
   # GET /activities/1 or /activities/1.json
   def show
   end
+
+  def search
+    @activities = Activity.all
+
+    if params[:query].present?
+      if params[:filter] == "Nome"
+        query = params[:query].downcase.tr("áàâãäéèêëíìîïóòôõöúùûü", "aaaaaeeeeiiiiooooouuuu")
+        @activities = @activities.where("LOWER(name) LIKE ?", "%#{query.downcase}%")
+      elsif params[:filter] == "Tipo"
+        query = params[:query].downcase.tr("áàâãäéèêëíìîïóòôõöúùûü", "aaaaaeeeeiiiiooooouuuu")
+        @activities = @activities.where("LOWER(activity_type) LIKE ?", "%#{query.downcase}%")
+
+      elsif params[:filter] == "Id"
+        query = params[:query].to_i
+        @activities = @activities.where(activity_id: query)
+      end
+
+
+
+    end
+
+    render :search
+  end
+
+
+
+
+
 
   # GET /activities/new
   def new
@@ -27,7 +56,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully created." }
+        format.html { redirect_to activity_url(@activity), notice: "Atividade inserida com sucesso!" }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +69,7 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully updated." }
+        format.html { redirect_to activity_url(@activity), notice: "Atividade atualizada com sucesso!" }
         format.json { render :show, status: :ok, location: @activity }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -82,8 +111,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :activity_type, :progress, :activity_id)
+      params.require(:activity).permit(:name, :activity_type, :progress, :activity_id, :description)
     end
 end
-
-

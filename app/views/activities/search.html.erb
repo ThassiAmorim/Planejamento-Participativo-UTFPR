@@ -1,0 +1,16 @@
+<h1>Resultados da Pesquisa</h1>
+
+<% if @activities.present? %>
+  <div id="activities">
+    <% @activities.each do |activity| %>
+      <div class="activity">
+        <%= render activity %>
+        <p>
+          <%= link_to "Detalhes", activity %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>Nenhuma atividade encontrada.</p>
+<% end %>

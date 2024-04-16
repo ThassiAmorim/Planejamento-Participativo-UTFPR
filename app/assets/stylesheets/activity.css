@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f6f0;
+    background-color: #fff8ed;
     margin: 0;
     padding: 0;
   }
@@ -20,7 +20,7 @@ body {
     margin-bottom: 20px;
   }
   
-  #activities {
+  .activities {
     margin-top: 20px;
   }
   
@@ -77,20 +77,31 @@ body {
     color: #3700ff; /* Cor vermelha para identificar administradores */
     font-weight: bold;
   }
+
   
   .delete-button {
     background-color: #ff3333;
     color: #fff;
     padding: 5px 10px;
+    margin-top: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .delete-button:hover {
-    background-color: #cc0000; /* Cor de fundo mais escura ao passar o mouse */
+  .update-button {
+    background-color: #2600ff;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-bottom: 55px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
   }
   
-  
-
+.show{
+  margin-left: auto
+}

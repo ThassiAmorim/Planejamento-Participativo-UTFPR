@@ -1,5 +1,6 @@
 
 <%= stylesheet_link_tag 'activity' %>
+
   <div class="background"></div>
     <div class="container">
       <% if notice %>
@@ -8,7 +9,17 @@
 
       <h1>Atividades</h1>
 
-      <div id="activities">
+      <div class="search-bar">
+        <%= form_tag search_activities_path, method: :get do %>
+          <%= text_field_tag :query, params[:query], placeholder: "Pesquisar..." %>
+          <%= select_tag :filter, options_for_select(["Nome", "Tipo", "Id"], params[:filter]) %>
+          <%= submit_tag "Buscar" %>
+        <% end %>
+    </div>
+
+
+
+      <div class="activities">
         <% @activities.each do |activity| %>
           <div class="activity">
             <%= render activity %>

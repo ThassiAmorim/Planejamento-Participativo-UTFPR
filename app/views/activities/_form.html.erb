@@ -26,11 +26,16 @@
       <div id="form-field">
         <%= form.label :progress, "Progress:", class: "label" %>
         <%= form.number_field :progress, class: "input" %>
-      </div>
+      </div><br>
 
       <div class="form-field">
         <%= form.label :activity_id, "Activity ID:", class: "label" %>
         <%= form.number_field :activity_id, class: "input" %>
+      </div>
+
+      <div class="form-field">
+      <%= form.label :description, "Description:", class: "label" %>
+      <%= form.text_area :description, class: "input", rows: 4 %>
       </div>
 
       <div class="form-field">
