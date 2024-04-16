@@ -43,15 +43,14 @@
   font-size: 2em;
   text-align: left; /* Alinhamento do texto à esquerda para uma lista */
   margin-bottom: 10px; /* Espaçamento inferior */
-  color: #000000; /* Cor do texto */
+  color: #1d1c1c; /* Cor do texto */
   font-style: italic;
-  font-family: "Gill Sans", sans-serif; /* Fonte 'Gill Sans' */
-  /* -webkit-text-stroke: 2px rgb(0, 0, 0); Contorno preto de 1px */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra do texto */
 }
 
 .content h3.activity-list ul {
-  list-style-type: disc; /* Estilo de lista com marcadores */
+  list-style-type:circle; /* Estilo de lista com marcadores */
   padding-left: 20px; /* Espaçamento interno para alinhar os marcadores */
 }
 
@@ -66,4 +65,11 @@
 
 .total-value {
   color: red; /* Cor do texto */
+}
+
+#projetos{
+  color: #ffffff; /* Cor do texto */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-text-stroke: 2px rgb(0, 0, 0); /* Contorno preto de 1px */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
 }
