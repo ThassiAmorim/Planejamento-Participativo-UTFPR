@@ -1,24 +1,18 @@
-# README
+# Projeto do Planejamento Participativo da UTFPR Campus Pato Branco
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Descrição
+Este projeto tem como objetivo desenvolver um aplicativo web utilizando o framework Ruby on Rails para divulgar o planejamento participativo da UTFPR Campus Pato Branco. O planejamento participativo é um processo usado na definição de metas, prioridades e ações para o futuro do campus.
 
-Things you may want to cover:
+## Funcionalidades
 
-* Ruby version
+### 1. Visualização do Planejamento Participativo
+   - Os usuários poderão visualizar informações sobre o planejamento participativo da UTFPR Campus Pato Branco.
+   - Os usuários poderão visualizar as atividades, os dashboards e relatórios.
 
-* System dependencies
+### 2. Administração
+   - Os responsáveis pela gestão do campus podem atualizar o banco de dados diretamente pela aplicação web, usando a funcionalidade "Área restrita" e acessando as atividades que gostariam de atualizar. 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tecnologias Utilizadas
+- Ruby on Rails: Framework web MVC utilizado para o desenvolvimento do aplicativo.
+- HTML/CSS/JavaScript: Tecnologias front-end para a criação da interface do usuário.
+- PostgreSQL: Banco de dados relacional para armazenamento de dados do aplicativo.
