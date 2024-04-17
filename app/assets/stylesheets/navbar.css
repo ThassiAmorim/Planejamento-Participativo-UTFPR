@@ -2,29 +2,31 @@
 
 body{
     margin: 0;
+    
 }
 
-/* Estilos gerais do navbar */
+
 .navbar {
-    background-color: #9edff0; /* Cor de fundo */
-    padding: 15px; /* Espaçamento interno */
-    color: white; /* Cor do texto */
+    background-color: #9edff0; 
+    padding: 5px; 
+    color: white; 
     display: flex;
     justify-content:left;
 }
 
-/* Estilos para o logo */
+
 .logo {
-    width: 100px; /* Largura da imagem do logo */
+    width: 100px; 
     margin-right: 20px;
 }
 
-/* Estilos para os links */
+
 #activities-links,
 #devise-links {
-    list-style-type: none; /* Remove os marcadores de lista */
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-top: 3px;
 }
 
 #devise-links {
@@ -34,33 +36,32 @@ body{
 
 #activities-links li,
 #devise-links li {
-    display: inline-block; /* Exibe os links em linha */
-    margin-right: 20px; /* Espaçamento entre os links */
+    display: inline-block; 
+    margin-right: 20px; 
 }
 
 
 #activities-links li a,
 #devise-links li a {
-    color: rgb(0, 0, 0); /* Cor dos links */
+    color: rgb(0, 0, 0); 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     font-weight: 300;
-    text-decoration: none; /* Remove sublinhado */
-    padding: 5px 10px; /* Espaçamento interno dos botões */
-    border-radius: 5px; /* Borda arredondada */
-    background-color: #00000000; /* Cor de fundo padrão dos botões */
-    transition: background-color 0.8s ease; /* Transição suave da cor de fundo */
+    text-decoration: none; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    background-color: #00000000; 
+    transition: background-color 0.8s ease;
 }
 
 #activities-links li a:hover,
 #devise-links li a:hover {
-    background-color: #6f72ff65; /* Cor de fundo dos botões ao passar o mouse */
+    background-color: #6f72ff65; 
 }
 
 .navbar p{
-    color: #05630d;
-    font-family:monospace;
-    font-weight:500;
-    font-size: 28px;
-    margin: 0%;
+    margin: 5px 0;
+    color: rgb(36, 36, 36);
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

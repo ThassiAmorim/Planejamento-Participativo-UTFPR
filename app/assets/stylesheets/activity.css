@@ -6,7 +6,7 @@ body {
   }
   
   .container {
-    max-width: 800px;
+    max-width: 70%;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff4b;
@@ -19,28 +19,31 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
-  
+
   .activities {
     margin-top: 20px;
   }
   
   .activity {
-    padding: 10px;
+    padding: 8px;
     background-color: #d6f9fc;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    
   }
   
   .activity p {
-    margin: 5px 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    color: rgb(36, 36, 36);
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
   }
   
   .activity a {
+    margin: 0;
     color: #007bff;
     text-decoration: none;
   }
-  
   .activity a:hover {
     text-decoration: underline;
   }
@@ -74,7 +77,7 @@ body {
   }
   
   .admin-tag {
-    color: #3700ff; /* Cor vermelha para identificar administradores */
+    color: #3700ff;
     font-weight: bold;
   }
 
@@ -105,3 +108,32 @@ body {
 .show{
   margin-left: auto
 }
+
+.progress-container {
+  display: inline-block;
+  top: 3px;
+  width: 120px; 
+  height: 14px; 
+  background-color: lightgray;
+  border: 1px solid black; 
+  border-radius: 3px;
+  position: relative;
+}
+
+.progress-bar {
+  display: block;
+  height: 100%;
+  background-color: rgb(138, 233, 138); 
+  width: 0; 
+  transition: width 0.3s ease; 
+}
+
+.progress-label {
+  position: absolute; 
+  top: -3px;
+  right: -45px; 
+  height: 100%;
+  line-height: 20px;
+  color: black;
+}
+

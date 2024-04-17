@@ -20,7 +20,12 @@
 
       <div class="form-field">
         <%= form.label :activity_type, "Type:", class: "label" %>
-        <%= form.select :activity_type, ['Graduação', 'Pós-Graduação', 'Infraestrutura', 'Extensão'], prompt: 'Select type', class: "input" %>
+        <%= form.select :activity_type, ['Graduação', 'Pesquisa e Pós-Graduação', 'Relações Empresariais e Comunitárias','Infraestrutura', 'Gestão do Campus', 'Servidores', 'Processos', 'Comunidade Acadêmica','Registro RG'], prompt: 'Select type', class: "input" %>
+      </div>
+
+      <div class="form-field">
+        <%= form.label :responsible, "Responsible:", class: "label" %>
+        <%= form.text_field :responsible, class: "input" %>
       </div>
 
       <div id="form-field">
@@ -35,7 +40,7 @@
 
       <div class="form-field">
       <%= form.label :description, "Description:", class: "label" %>
-      <%= form.text_area :description, class: "input", rows: 4 %>
+      <%= form.text_area :description, class: "input", rows: 30 %>
       </div>
 
       <div class="form-field">

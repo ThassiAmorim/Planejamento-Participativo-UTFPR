@@ -6,12 +6,12 @@
 
 h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
     margin-left: 10%;
 }
 
 #container {
-    max-width: 800px;
-    margin-right: auto;
+    max-width: 30%;
   }
   
   .chart-container {
@@ -20,12 +20,11 @@ h2{
   }
   
   canvas {
-    max-width: 300px;
-    margin-right: 20px;
+    max-width: 500%;
   }
   
   #activityChart {
-    margin: 10%;
+    margin: 5%;
     order: 1;
   }
   
