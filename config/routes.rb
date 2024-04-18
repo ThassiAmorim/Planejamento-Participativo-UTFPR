@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'chart/index'
   get 'dashboard', to: 'activities#dashboard'
+  get 'relatorio', to: 'activities#relatorio'
+  get 'search_activities', to: 'activities#search', as: 'search_activities'
+
+
 
   devise_for :users
   resources :activities

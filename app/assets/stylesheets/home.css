@@ -10,19 +10,44 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://media.diariodosudoeste.com.br/0f2864ea-utfpr.jpg'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem de fundo */
+    background-image: url('/assets/utfprfoto.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
-    filter: blur(5px); /* Aplica um filtro de desfoque à imagem de fundo */
+    background-repeat: no-repeat; 
+    filter: blur(5px); 
   }
   
-  .content h1 {
+  .content-container {
     position: absolute;
-    top: 50%;
+    top: 50px; 
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    color: #fff; /* Cor do texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
-  }
+    transform: translateX(-50%);
+    background-color:#9ee0f0ce; 
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    max-width: 50%; 
+}
+
+.content h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 20px; 
+  color: #ffffff;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-text-stroke: 2px rgb(0, 0, 0); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content h2{ 
+  padding: 0;
+  margin: 0;
+  color: #333;; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255); 
+}
+
+a{
+  text-decoration: none
+
+}

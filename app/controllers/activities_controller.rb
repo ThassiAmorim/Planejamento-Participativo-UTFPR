@@ -8,8 +8,26 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
+
+
   # GET /activities/1 or /activities/1.json
   def show
+  end
+
+  def search
+    @query = params[:query]
+    @filter = params[:filter]
+
+    # Lógica para buscar atividades com base nos parâmetros
+    @activities = Activity.all
+
+    if @query.present?
+      @activities = @activities.where("name LIKE ?", "%#{@query}%")
+    end
+
+    if @filter.present? && @filter != "Todos"
+      @activities = @activities.where(activity_type: @filter)
+    end
   end
 
   # GET /activities/new
@@ -27,7 +45,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully created." }
+        format.html { redirect_to activity_url(@activity), notice: "Atividade inserida com sucesso!" }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +58,7 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully updated." }
+        format.html { redirect_to activity_url(@activity), notice: "Atividade atualizada com sucesso!" }
         format.json { render :show, status: :ok, location: @activity }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -74,6 +92,21 @@ class ActivitiesController < ApplicationController
 
   end
 
+  def relatorio
+    @activities = Activity.all
+    @activities_total      = @activities.count
+    @activities_infra      = @activities.where(activity_type: "Infraestrutura").count
+    @activities_graduacao  = @activities.where(activity_type: "Graduação").count
+    @activities_pos        = @activities.where(activity_type: "Pesquisa e Pós-Graduação").count
+    @activities_relacoes   = @activities.where(activity_type: "Relações Empresariais e Comunitárias").count
+    @activities_gestao     = @activities.where(activity_type: "Gestão do Campus").count
+    @activities_servidores = @activities.where(activity_type: "Servidores").count
+    @activities_processos  = @activities.where(activity_type: "Processos").count
+    @activities_comunidade = @activities.where(activity_type: "Comunidade Acadêmica").count
+    @activities_rg         = @activities.where(activity_type: "Registro RG").count
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_activity
@@ -82,8 +115,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :activity_type, :progress, :activity_id)
+      params.require(:activity).permit(:name, :activity_type, :progress, :activity_id, :description, :responsible)
     end
 end
-
-

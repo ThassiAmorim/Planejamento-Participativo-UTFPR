@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag "activity" %>
 
+
 <div id="<%= dom_id activity %>" class="activity">
   <p>
     <strong>Nome:</strong>
@@ -12,12 +13,28 @@
   </p>
 
   <p>
+    <strong>Responsável:</strong>
+    <%= activity.responsible %>
+  </p>
+
+  <p>
     <strong>Progresso:</strong>
-    <%= activity.progress %>
+    <span class="progress-container">
+      <span class="progress-bar" style="width: <%= activity.progress %>%;"></span>
+      <span class="progress-label"><%= activity.progress %>%</span>
+    </span>
   </p>
 
   <p>
     <strong>Id:</strong>
     <%= activity.activity_id %>
   </p>
+
+  <% if action_name == "show" %>
+    <p>
+      <strong>Descrição:</strong>
+      <%= simple_format(activity.description) %>
+    </p>
+  <% end %>
+
 </div>

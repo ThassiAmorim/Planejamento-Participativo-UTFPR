@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "relatorio" %>
+
+<div class="report-container">
+  <h2 class="report-title">Projetos Atuais</h2> <!-- Adicionado título -->
+
+  <h3 class="activity-list">
+    <ul>
+      <li>Graduação: <%=@activities_graduacao%></li>
+      <li>Pesquisa e Pós-Graduação: <%=@activities_pos%></li>
+      <li>Infraestrutura: <%=@activities_infra%></li>
+      <li>Relações Empresariais e Comunitárias: <%=@activities_relacoes%></li>
+      <li>Gestão do Campus: <%=@activities_gestao%></li>
+      <li>Servidores: <%=@activities_servidores%></li>
+      <li>Processos: <%=@activities_processos%></li>
+      <li>Comunidade Acadêmica: <%=@activities_comunidade %></li>
+      <li>Registro RG: <%=@activities_rg %></li>
+    </ul>
+  </h3>
+
+  <h3>Total: <span class="total-value"><%=@activities_total%></span></h3>
+</div>

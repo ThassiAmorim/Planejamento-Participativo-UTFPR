@@ -2,15 +2,14 @@
 
 <p style="color: green"><%= notice %></p>
 
-<%= render @activity %>
 
-<div>
+<div class="activities">
 
+  <%= render @activity %>
   <% if user_signed_in? %>
-    <%= link_to "Editar atividade", edit_activity_path(@activity) %> |
-    <%= button_to "Deletar atividade", @activity, method: :delete %>
+    <%= link_to "Editar atividade", edit_activity_path(@activity), class:"update-button" %>
+    <%= button_to "Deletar atividade", @activity, method: :delete, class:"delete-button" %>
   <% end %>
 
-<%= link_to "Todas as atividades", activities_path %>
   
 </div>
