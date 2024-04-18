@@ -20,16 +20,18 @@ Projeto realizado utilizando o framework Ruby on Rails para divulgar o planejame
 # Principais interfaces
 
 ## Homepage
-![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/3266017b-bcc9-4213-bc47-cf01d5396cd9)
+![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/2ed3971d-14c6-4a4f-8324-d4ec08214f52)
 
 ## Atividades
-![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/3335ac67-75f0-4c09-a24d-fef38c36178c)
+![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/7ff7fd3a-20c5-43bb-b7c2-2f7fba53d88d)
 
 ## Dashboards
-![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/0da33b8e-ce45-4cb6-a3cd-9698e65a1c83)
+![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/2c221be4-2dd4-4026-9958-31f74cf28691)
 
 ## Relatórios
-![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/c0109cfe-88e8-4de8-b3c5-4c6da8a82b13)
+![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/9eca9728-9608-4f16-911e-3debfd785fdb)
 
-## Nova Atividade (Somente para área restrita)
-![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/88e72447-8898-4179-99dd-70a52ebb8d74)
+## Editar/Nova Atividade (Somente para área restrita)
+![image](https://github.com/ThassiAmorim/Planejamento-Participativo-UTFPR/assets/62359485/035e1e5d-3db9-4b06-9b50-819374632ce4)
+
+
