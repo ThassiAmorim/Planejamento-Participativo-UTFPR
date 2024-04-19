@@ -1,7 +1,7 @@
 # Projeto do Planejamento Participativo da UTFPR Campus Pato Branco
 
 ## Descrição
-Projeto realizado utilizando o framework Ruby on Rails para divulgar o planejamento participativo da UTFPR Campus Pato Branco, de maneira fácil e com vizualização dos dados atráves de dashboards e relatórios. O planejamento participativo é um processo usado na definição de metas, prioridades e ações para o futuro do campus.
+Projeto em desenvolvimento realizado utilizando o framework Ruby on Rails para divulgar o planejamento participativo da UTFPR Campus Pato Branco, de maneira fácil e com vizualização dos dados atráves de dashboards e relatórios. O planejamento participativo é um processo usado na definição de metas, prioridades e ações para o futuro do campus.
 
 ## Funcionalidades
 
